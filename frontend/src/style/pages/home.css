@@ -1,0 +1,10 @@
+.features-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @media (min-width: 920px) {
+    .features-container {
+      flex-direction: row;
+    }
+  }
