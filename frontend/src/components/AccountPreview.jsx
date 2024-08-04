@@ -10,7 +10,7 @@ function AccountPreview({name, amount, status}) {
                 <p className="account-amount-description">{status}</p>
             </div>
             <NavLink>
-                <button className="transaction-button">View transactions</button>
+                <button>View transactions</button>
             </NavLink>
         </section>
     )
