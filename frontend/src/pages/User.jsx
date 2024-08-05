@@ -6,9 +6,11 @@ import "../style/pages/user.css"
 
 import AccountPreview from "../components/AccountPreview"
 import EditName from "../components/EditName"
+import { Navigate, useNavigate } from "react-router"
 
 function User() {
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     async function fetchProfileData(authToken) {
         try {
@@ -36,6 +38,9 @@ function User() {
     
     useEffect(() => {
       const authToken = localStorage.getItem("authToken")
+      if (!authToken) {
+        navigate("/login")
+      }
       if (authToken) {
          fetchProfileData(authToken)
       }

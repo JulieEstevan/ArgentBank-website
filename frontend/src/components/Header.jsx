@@ -33,7 +33,7 @@ function Header() {
          <nav className="nav">
             {user ? (
                <>
-                  <Link to="/User" className="link">
+                  <Link to="/profile" className="link">
                      <i className="fa fa-user-circle icon-header"></i>
                      {!userProfile.userName ? <>{userProfile.firstName}</> : <>{userProfile.userName}</>}
                   </Link>

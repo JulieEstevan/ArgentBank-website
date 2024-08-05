@@ -16,14 +16,18 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
     <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/user" element={<User />} />
-        <Route path="/*" element={<Error />} />
-      </Routes>
-      <Footer />
+      <div className="background">
+          <div className="background-main">
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/profile" element={<User />} />
+            <Route path="/*" element={<Error />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
     </Router>
     </Provider>
   </React.StrictMode>

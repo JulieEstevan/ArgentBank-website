@@ -35,7 +35,7 @@ function Login() {
                 const token = responseData.body.token
                 localStorage.setItem("authToken", token)
                 dispatch(setSignIn({ token }))
-                navigate("/user")
+                navigate("/profile")
             } else {
                 setErrorMsg(response.statusText)
             }
